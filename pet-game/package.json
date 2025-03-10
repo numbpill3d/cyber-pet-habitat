@@ -1,0 +1,22 @@
+{
+  "name": "pet-game",
+  "version": "1.0.0",
+  "description": "A Web 1.0 style pet game where users can collect eggs, hatch pets, and grow them based on interactions.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step not defined'"
+  },
+  "keywords": [
+    "pet",
+    "game",
+    "collect",
+    "hatch",
+    "web1.0"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

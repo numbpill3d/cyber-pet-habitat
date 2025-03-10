@@ -1,0 +1,65 @@
+body {
+    background-color: #c0c0c0; /* Light gray background for Windows 98 aesthetic */
+    font-family: 'MS Sans Serif', sans-serif; /* Retro font */
+    color: #000000; /* Black text color */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-weight: normal; /* Normal font weight for headings */
+}
+
+button {
+    background-color: #f0f0f0; /* Light button background */
+    border: 2px solid #000000; /* Black border */
+    border-radius: 3px; /* Slightly rounded corners */
+    color: #000000; /* Black text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 5px 10px; /* Padding for buttons */
+    margin: 5px; /* Margin around buttons */
+}
+
+button:hover {
+    background-color: #e0e0e0; /* Darker background on hover */
+}
+
+.window {
+    background-color: #ffffff; /* White window background */
+    border: 2px solid #000000; /* Black border for windows */
+    border-radius: 5px; /* Rounded corners for windows */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    padding: 10px; /* Padding inside windows */
+    margin: 10px; /* Margin around windows */
+}
+
+.pet-display {
+    width: 100px; /* Fixed width for pet display */
+    height: 100px; /* Fixed height for pet display */
+    margin: auto; /* Center the pet display */
+}
+
+.stats-panel {
+    display: flex; /* Flexbox for stats layout */
+    justify-content: space-between; /* Space between stats */
+    margin-top: 10px; /* Margin above stats panel */
+}
+
+.chat-interface {
+    border: 1px solid #000000; /* Border for chat interface */
+    padding: 5px; /* Padding inside chat interface */
+    height: 150px; /* Fixed height for chat interface */
+    overflow-y: auto; /* Scrollable if content overflows */
+}
+
+.environment-customization {
+    display: flex; /* Flexbox for customization options */
+    flex-wrap: wrap; /* Wrap items to next line */
+    margin-top: 10px; /* Margin above customization section */
+}
+
+.isometric-view {
+    width: 100%; /* Full width for isometric view */
+    height: 400px; /* Fixed height for isometric view */
+    position: relative; /* Positioning context for child elements */
+}
