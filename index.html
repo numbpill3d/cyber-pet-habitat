@@ -3,39 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Pet Habitat</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Digital Pet Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="start-screen">
-        <h1>Cyber Pet Habitat</h1>
+        <h1>Digital Pet Game</h1>
         <button id="enter-button">Enter</button>
         <button id="view-button">View</button>
         <button id="data-button">Data</button>
     </div>
-    <div id="quiz-container" style="display: none;">
-        <h1>Pet Creation Quiz</h1>
+    <div id="quiz-screen" style="display: none;">
+        <h2>Pet Creation Quiz</h2>
         <div id="quiz-questions">
-            <!-- Quiz questions will be added here -->
+            <!-- Quiz questions will be dynamically inserted here -->
         </div>
-        <button id="submit-quiz-button">Submit</button>
+        <button id="submit-quiz">Submit</button>
     </div>
-    <div id="game-container" style="display: none;">
-        <h1>Cyber Pet Habitat</h1>
-        <div id="pet-status">
-            <!-- Pet status will be displayed here -->
-        </div>
-        <div id="controls">
-            <!-- Game controls will be added here -->
+    <div id="game-screen" style="display: none;">
+        <div id="pet-display">
+            <img id="pet-image" src="placeholder.gif" alt="Your Pet">
         </div>
         <div id="chat-interface">
+            <div id="chat-log"></div>
             <input type="text" id="chat-input" placeholder="Talk to your pet...">
-            <button id="send-chat-button">Send</button>
-            <div id="chat-log">
-                <!-- Chat log will be displayed here -->
-            </div>
+            <button id="send-chat">Send</button>
+        </div>
+        <div id="stats-panel">
+            <p>Hunger: <span id="hunger-stat">50</span></p>
+            <p>Happiness: <span id="happiness-stat">50</span></p>
+            <p>Energy: <span id="energy-stat">50</span></p>
+            <p>Intelligence: <span id="intelligence-stat">50</span></p>
+            <p>Growth Level: <span id="growth-level">1</span></p>
+        </div>
+        <div id="environment-customization">
+            <!-- Environment customization options will be dynamically inserted here -->
         </div>
     </div>
-    <script src="script.js"></script>
+    <div id="3d-view-screen" style="display: none;">
+        <canvas id="3d-canvas"></canvas>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
