@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Pet Game</title>
+    <title>Cyber Pet Habitat - Digital Pet Simulator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="start-screen">
-        <h1>Digital Pet Game</h1>
-        <button id="enter-button">Enter</button>
-        <button id="view-button">View</button>
-        <button id="data-button">Data</button>
+        <h1>🐾 Cyber Pet Habitat 🐾</h1>
+        <p style="color: #fff; font-size: 18px; margin-bottom: 30px;">Your Virtual Pet Companion</p>
+        <button id="enter-button">Enter Game</button>
+        <button id="view-button">View Habitat</button>
+        <button id="data-button">Pet Data</button>
     </div>
     <div id="quiz-screen" style="display: none;">
         <h2>Pet Creation Quiz</h2>
@@ -21,24 +22,39 @@
         <button id="submit-quiz">Submit</button>
     </div>
     <div id="game-screen" style="display: none;">
-        <div id="pet-display">
-            <img id="pet-image" src="placeholder.gif" alt="Your Pet">
+        <div class="game-container">
+            <div class="left-panel">
+                <div id="pet-display">
+                    <div id="pet-image"></div>
+                </div>
+                <div id="action-buttons">
+                    <button onclick="handlePetInteraction('feed')" class="action-btn">🍎 Feed</button>
+                    <button onclick="handlePetInteraction('play')" class="action-btn">🎾 Play</button>
+                    <button onclick="handlePetInteraction('sleep')" class="action-btn">😴 Sleep</button>
+                    <button onclick="handlePetInteraction('clean')" class="action-btn">🧼 Clean</button>
+                    <button onclick="handlePetInteraction('train')" class="action-btn">📚 Train</button>
+                </div>
+            </div>
+            <div class="right-panel">
+                <div id="stats-panel">
+                    <h3>Stats</h3>
+                    <p>Hunger: <span id="hunger-stat">100</span>%</p>
+                    <p>Happiness: <span id="happiness-stat">100</span>%</p>
+                    <p>Energy: <span id="energy-stat">100</span>%</p>
+                    <p>Intelligence: <span id="intelligence-stat">50</span>%</p>
+                    <p>Growth Level: <span id="growth-level">1</span></p>
+                </div>
+                <div id="chat-interface">
+                    <h3>Chat with your pet</h3>
+                    <div id="chat-log"></div>
+                    <div class="chat-input-container">
+                        <input type="text" id="chat-input" placeholder="Talk to your pet...">
+                        <button id="send-chat">Send</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="chat-interface">
-            <div id="chat-log"></div>
-            <input type="text" id="chat-input" placeholder="Talk to your pet...">
-            <button id="send-chat">Send</button>
-        </div>
-        <div id="stats-panel">
-            <p>Hunger: <span id="hunger-stat">50</span></p>
-            <p>Happiness: <span id="happiness-stat">50</span></p>
-            <p>Energy: <span id="energy-stat">50</span></p>
-            <p>Intelligence: <span id="intelligence-stat">50</span></p>
-            <p>Growth Level: <span id="growth-level">1</span></p>
-        </div>
-        <div id="environment-customization">
-            <!-- Environment customization options will be dynamically inserted here -->
-        </div>
+        <button id="back-to-menu" onclick="backToMenu()">Back to Menu</button>
     </div>
     <div id="3d-view-screen" style="display: none;">
         <canvas id="3d-canvas"></canvas>
